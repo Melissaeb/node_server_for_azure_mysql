@@ -11,7 +11,7 @@ const pool = mysql.createPool({
   user: process.env.MYSQL_USER, //root user in mysql
   password: process.env.MYSQL_PASSWORD, //password for root user in mysql
   database: process.env.MYSQL_DATABASE, //name of the database you want to query
-  port: process.env.PORT,
+  port: 3306,
   ssl: { ca: fs.readFileSync("./DigiCertGlobalRootCA.crt.pem") },
   waitForConnections: true, //if want to allow people to queue for connection spots
   connectionLimit: 10, // number of available connection spots
