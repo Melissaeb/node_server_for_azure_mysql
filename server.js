@@ -19,7 +19,7 @@ const pool = mysql.createPool({
   queueLimit: 0, //how many people can queue for a connection spot- if 0 as many people as needed can queue
 });
 
-app.use(cors({ origin: [`http://localhost:5001`, process.env.CLIENT_HOST] }));
+app.use(cors({ origin: process.env.CLIENT_HOST }));
 
 //========== ENDPOINTS ============//
 //Root endpoint: return all countries
